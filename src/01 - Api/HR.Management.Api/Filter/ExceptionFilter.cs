@@ -19,7 +19,7 @@ namespace HR.Management.Api.Filter
             if (context.Exception is HrManagementException)
             {
                 HandleProjectException(context);
-            } 
+            }
             else
             {
                 ThrowUnknownError(context);

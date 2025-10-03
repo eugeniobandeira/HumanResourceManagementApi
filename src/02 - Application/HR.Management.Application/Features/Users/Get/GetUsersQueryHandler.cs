@@ -5,7 +5,7 @@ using MediatR;
 
 namespace HR.Management.Application.Features.Users.Get;
 
-public class GetUsersQueryHandler(IGetOnlyUserRepository getOnlyUserRepository) 
+public class GetUsersQueryHandler(IGetOnlyUserRepository getOnlyUserRepository)
     : IRequestHandler<GetUsersQuery, IEnumerable<UserResponse>>
 {
     private readonly IGetOnlyUserRepository _getOnlyUserRepository = getOnlyUserRepository;

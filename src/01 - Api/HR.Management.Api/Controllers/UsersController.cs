@@ -29,7 +29,7 @@ public class UsersController(IMediator mediator) : ControllerBase
     [ProducesResponseType(typeof(UserResponse), StatusCodes.Status201Created)]
     [ProducesResponseType(typeof(ErrorResponse), StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> CreateUser(
-        [FromBody] CreateUserCommand command, 
+        [FromBody] CreateUserCommand command,
         CancellationToken cancellationToken)
     {
         var user = await _mediator.Send(command, cancellationToken);
@@ -73,15 +73,15 @@ public class UsersController(IMediator mediator) : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status500InternalServerError)]
     public async Task<IActionResult> GetUserById(
-        [FromRoute] Guid id, 
+        [FromRoute] Guid id,
         CancellationToken cancellationToken)
     {
         var query = new GetUserByIdQuery(id);
 
         var user = await _mediator.Send(query, cancellationToken);
 
-        return user is null 
-            ? NotFound() 
+        return user is null
+            ? NotFound()
             : Ok(user);
     }
 

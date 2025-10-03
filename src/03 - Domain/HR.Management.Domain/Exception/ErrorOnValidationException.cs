@@ -2,7 +2,7 @@
 
 namespace HR.Management.Domain.Exception
 {
-    public class ErrorOnValidationException(List<string> errorMessages) 
+    public class ErrorOnValidationException(List<string> errorMessages)
         : HrManagementException(string.Empty)
     {
         private readonly List<string> _errors = errorMessages;

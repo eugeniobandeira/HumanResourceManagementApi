@@ -9,8 +9,8 @@ using System.Security.Claims;
 namespace HR.Management.Infrastructure.Services.LoggedUser;
 
 internal class LoggedUser(
-    HrManagementDbContext hrManagementDbContext, 
-    ITokenProvider tokenProvider) 
+    HrManagementDbContext hrManagementDbContext,
+    ITokenProvider tokenProvider)
     : ILoggedUser
 {
     private readonly HrManagementDbContext _dbContext = hrManagementDbContext;

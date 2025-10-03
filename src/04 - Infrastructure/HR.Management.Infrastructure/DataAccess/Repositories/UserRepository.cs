@@ -3,7 +3,7 @@ using HR.Management.Domain.Interfaces.UserRepository;
 using Microsoft.EntityFrameworkCore;
 
 namespace HR.Management.Infrastructure.DataAccess.Repositories;
-internal class UserRepository(HrManagementDbContext dbContext) : 
+internal class UserRepository(HrManagementDbContext dbContext) :
     IAddOnlyUserRepository,
     IGetOnlyUserRepository,
     IGetByIdOnlyUserRepository,
@@ -12,7 +12,7 @@ internal class UserRepository(HrManagementDbContext dbContext) :
     private readonly HrManagementDbContext _dbContext = dbContext;
 
     public async Task AddUserAsync(
-        UserEntity user, 
+        UserEntity user,
         CancellationToken cancellationToken = default)
     {
         await _dbContext.Users.AddAsync(user, cancellationToken);
@@ -25,7 +25,7 @@ internal class UserRepository(HrManagementDbContext dbContext) :
     }
 
     public async Task<UserEntity?> GetByEmailAsync(
-        string email, 
+        string email,
         CancellationToken cancellationToken = default)
     {
         return await _dbContext.Users
@@ -33,7 +33,7 @@ internal class UserRepository(HrManagementDbContext dbContext) :
     }
 
     public async Task<UserEntity?> GetByIdAsync(
-        Guid id, 
+        Guid id,
         CancellationToken cancellationToken = default)
     {
         return await _dbContext.Users

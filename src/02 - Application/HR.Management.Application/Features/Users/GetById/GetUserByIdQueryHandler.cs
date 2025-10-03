@@ -4,7 +4,7 @@ using HR.Management.Domain.Response;
 using MediatR;
 
 namespace HR.Management.Application.Features.Users.GetById;
-public class GetUserByIdQueryHandler(IGetByIdOnlyUserRepository getByIdOnlyUserRepository) 
+public class GetUserByIdQueryHandler(IGetByIdOnlyUserRepository getByIdOnlyUserRepository)
     : IRequestHandler<GetUserByIdQuery, UserResponse?>
 {
     private readonly IGetByIdOnlyUserRepository _getByIdOnlyUserRepository = getByIdOnlyUserRepository;
@@ -13,7 +13,7 @@ public class GetUserByIdQueryHandler(IGetByIdOnlyUserRepository getByIdOnlyUserR
     {
         var user = await _getByIdOnlyUserRepository.GetByIdAsync(request.Id, cancellationToken);
 
-        return user is null 
+        return user is null
             ? null
             : UserAdapter.FromEntityToResponse(user);
     }

@@ -4,5 +4,5 @@ using MediatR;
 namespace HR.Management.Application.Features.Login;
 
 public sealed record LoginUserCommand(
-    string Email, 
+    string Email,
     string Password) : IRequest<LoginResponse>;

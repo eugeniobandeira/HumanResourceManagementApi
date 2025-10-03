@@ -1,5 +1,5 @@
 ﻿namespace HR.Management.Domain.Response;
-public class LoginResponse
+public sealed class LoginResponse : UserResponse
 {
     public string Token { get; set; } = string.Empty;
 }

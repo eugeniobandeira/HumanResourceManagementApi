@@ -6,7 +6,7 @@ using System.Security.Claims;
 using System.Text;
 
 namespace HR.Management.Infrastructure.Security.Tokens;
-internal class JwtTokenGenerator(uint expiryMinutes, string signingKey) 
+internal class JwtTokenGenerator(uint expiryMinutes, string signingKey)
     : IJwtTokenGenerator
 {
     private readonly uint _expiryMinutes = expiryMinutes;

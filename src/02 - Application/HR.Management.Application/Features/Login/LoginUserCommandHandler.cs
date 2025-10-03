@@ -8,9 +8,9 @@ using MediatR;
 namespace HR.Management.Application.Features.Login;
 
 public class LoginUserCommandHandler(
-    IGetByEmailOnlyUserRepository getByEmailOnlyUserRepository, 
-    IPasswordEncripter passwordEncripter, 
-    IJwtTokenGenerator jwtTokenGenerator) 
+    IGetByEmailOnlyUserRepository getByEmailOnlyUserRepository,
+    IPasswordEncripter passwordEncripter,
+    IJwtTokenGenerator jwtTokenGenerator)
     : IRequestHandler<LoginUserCommand, LoginResponse>
 {
     private readonly IGetByEmailOnlyUserRepository _getByEmailOnlyUserRepository = getByEmailOnlyUserRepository;
@@ -31,7 +31,11 @@ public class LoginUserCommandHandler(
 
         return new LoginResponse
         {
-            Token = _jwtTokenGenerator.Generate(user)
+            Id = user.Id,
+            Name = user.Name,
+            Email = user.Email,
+            Role = user.Role,
+            Token = _jwtTokenGenerator.Generate(user),
         };
     }
 }

@@ -5,7 +5,7 @@ internal class PasswordEncripter : IPasswordEncripter
 {
     public string Encrypt(string password)
     {
-        string  hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+        string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
 
         return hashedPassword;
     }
