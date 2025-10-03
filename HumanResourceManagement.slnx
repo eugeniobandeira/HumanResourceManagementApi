@@ -1,0 +1,23 @@
+<Solution>
+  <Folder Name="/solution-items/">
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+  </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/01 - Api/">
+    <Project Path="src/01 - Api/HR.Management.Api/HR.Management.Api.csproj" Id="3465f313-8a73-418b-b080-dbaae968e0b1" />
+  </Folder>
+  <Folder Name="/src/02 - Application/">
+    <Project Path="src/02 - Application/HR.Management.Application/HR.Management.Application.csproj" Id="95b793d5-2920-4f5f-a8db-8ac7366366d4" />
+  </Folder>
+  <Folder Name="/src/03 - Domain/">
+    <Project Path="src/03 - Domain/HR.Management.Domain/HR.Management.Domain.csproj" Id="3b5571de-2453-4fc6-b53c-14f972114983" />
+  </Folder>
+  <Folder Name="/src/04 - Infrastructure/">
+    <Project Path="src/04 - Infrastructure/HR.Management.Infrastructure/HR.Management.Infrastructure.csproj" Id="94877c27-c5fb-4334-bd14-f0da0491c469" />
+  </Folder>
+  <Folder Name="/tests/" />
+  <Folder Name="/tests/Unit/">
+    <Project Path="tests/Unit/Unit.Test/Unit.Test.csproj" Id="9867d219-b590-4fca-bc5c-fdd81297c709" />
+  </Folder>
+</Solution>
