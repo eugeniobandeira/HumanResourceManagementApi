@@ -27,6 +27,7 @@ dotnet test
 - `POST v1/api/users` - Create user
 - `GET v1/api/users` - List all users
 - `GET v1/api/users/{id}` - Get user by ID
+- `POST v1/api/login` - Do login
 
 ## 🔒 Security
 - JWT Bearer authentication
